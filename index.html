@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>教育管理平台</title><style>.first-loading-wrp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        min-height: 90vh;
+        transition: opacity 1s;
+      }
+
+      .first-loading-wrp>h1 {
+        font-size: 30px;
+        font-weight: bolder;
+      }
+
+      .first-loading-wrp .loading-wrp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 98px;
+      }
+
+      .dot {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        font-size: 64px;
+        transform: rotate(45deg);
+        animation: antRotate 1.2s infinite linear;
+      }
+
+      .dot i {
+        position: absolute;
+        display: block;
+        width: 28px;
+        height: 28px;
+        background-color: #1890ff;
+        border-radius: 100%;
+        opacity: 0.3;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        animation: antSpinMove 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        animation-delay: 1.2s;
+      }
+
+      @keyframes antRotate {
+        to {
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes antSpinMove {
+        to {
+          opacity: 1;
+        }
+      }</style><script defer="defer" src="/js/chunk-vendors.ac29c806.js"></script><script defer="defer" src="/js/app.e8e18deb.js"></script></head><body><noscript><strong>We're sorry but 03_vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="first-loading-wrp" v-if="isLoading"><div class="loading-wrp"><span class="dot dot-spin"><i></i> <i></i> <i></i> <i></i></span></div><h2>努力加载中...</h2></div><div v-else><p>{{ countdown }}秒后自动跳转到{{ item[0].name }}...</p></div></div></body></html>
